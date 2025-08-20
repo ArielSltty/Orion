@@ -1,0 +1,26 @@
+{
+  "canisters": {
+    "Orion_backend": {
+      "main": "src/Orion_backend/main.mo",
+      "type": "motoko"
+    },
+    "Orion_frontend": {
+      "dependencies": [
+        "Orion_backend"
+      ],
+      "source": [
+        "src/Orion_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "Orion_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
