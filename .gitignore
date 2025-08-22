@@ -1,25 +1,28 @@
-# Various IDEs and Editors
+.env
+src/Orion_agent/private_keys.json
+
+node_modules/
+src/Orion_frontend/node_modules/
+src/Orion_agent/venv/
+
+.dfx/
+dist/
+src/Orion_frontend/dist/
+
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+*.log
+*.tmp
+*.swp
+
+.DS_Store
+Thumbs.db
+
 .vscode/
 .idea/
-**/*~
+*.code-workspace
 
-# Mac OSX temporary files
-.DS_Store
-**/.DS_Store
-
-# dfx temporary files
-.dfx/
-
-# generated files
-**/declarations/
-
-# rust
-target/
-
-# frontend code
-node_modules/
-dist/
-.svelte-kit/
-
-# environment variables
-.env
+start_all.sh

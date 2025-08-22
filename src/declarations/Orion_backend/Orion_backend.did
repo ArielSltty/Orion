@@ -1,0 +1,64 @@
+type SimulationType = variant {monte_carlo;};
+type SimulationResult = 
+ record {
+   error: opt text;
+   result: opt text;
+   success: bool;
+   timestamp: int;
+ };
+type SimulationResponse = 
+ record {
+   error: opt text;
+   request_id: text;
+   result: opt text;
+   signature: opt text;
+   success: bool;
+ };
+type SimulationRequest = 
+ record {
+   agent_signature: opt text;
+   id: text;
+   parameters: SimulationParameters;
+   result: opt SimulationResult;
+   simulation_type: SimulationType;
+   status: RequestStatus;
+   timestamp: int;
+ };
+type SimulationParameters = 
+ record {
+   drift: float64;
+   initial_price: float64;
+   n_simulations: nat;
+   time_horizon: float64;
+   time_steps: nat;
+   volatility: float64;
+ };
+type RequestStatus = 
+ variant {
+   completed;
+   failed;
+   pending;
+   processing;
+ };
+type ChatResponse = 
+ record {
+   parameter_template: opt SimulationParameters;
+   requires_parameters: bool;
+   response: text;
+   session_id: text;
+   timestamp: int;
+ };
+type ChatMessage = 
+ record {
+   session_id: text;
+   "text": text;
+   timestamp: int;
+   user_id: text;
+ };
+service : {
+  get_simulation_result: (request_id: text) -> (opt SimulationRequest) query;
+  receive_simulation_result: (response: SimulationResponse) -> (bool);
+  send_chat_message: (message: ChatMessage) -> (ChatResponse);
+  submit_simulation_request: (simulation_type: SimulationType, parameters:
+   SimulationParameters) -> (text);
+}
