@@ -1,10 +1,10 @@
 # Orion Project – Decentralized Monte Carlo Simulation Platform
 
-![Orion Logo](https://via.placeholder.com/200x80?text=Orion+Logo)
+![Orion Logo](https://github.com/egner-npc/Orion-assets/blob/d14dab4db0445e2298dd3855c34548dddccf00c0/photo_6143425679107147344_y.jpg)
 
 ## Introduction
 
-Orion is a next-generation **decentralized simulation platform** powered by **Artificial Intelligence (AI)** and **blockchain technology**. The platform allows users to execute complex Monte Carlo financial simulations, interact with intelligent agents, and verify results on-chain.  
+Orion is a next-generation **decentralized simulation platform** powered by **Artificial Intelligence (AI)** and **blockchain technology**. The platform allows users to execute complex Monte Carlo financial simulations, interact with intelligent agents, and verify results on-chain.
 
 Designed for the **ICP x FET Hackathon**, Orion focuses on **security, transparency, and futuristic user experience** inspired by cyberpunk aesthetics. The platform integrates **Internet Identity login**, **smart agent computation**, and **interactive visualization** of simulation outcomes.
 
@@ -23,6 +23,7 @@ Designed for the **ICP x FET Hackathon**, Orion focuses on **security, transpare
    - Project introduction and team showcase.
    - "Run Simulation" button triggers Internet Identity login.
    - Fully responsive UI with neon and cyberpunk animations.
+   - Long, descriptive introduction of the Orion project for context and user understanding.
 
 2. **Dashboard**
    - Input parameters for Monte Carlo simulation:
@@ -37,7 +38,7 @@ Designed for the **ICP x FET Hackathon**, Orion focuses on **security, transpare
      - Standard Deviation
      - 95% Confidence Interval
    - Blockchain verification of results.
-   - Neon-themed, consistent UI design.
+   - Neon-themed, consistent UI design matching landing page aesthetics.
 
 3. **Backend (Motoko – Internet Computer)**
    - API endpoint: `submit_simulation_request`.
@@ -53,3 +54,7 @@ Designed for the **ICP x FET Hackathon**, Orion focuses on **security, transpare
 ---
 
 ## System Architecture
+
+### Flowchart
+
+![Orion Flowchart](https://raw.githubusercontent.com/egner-npc/Orion-assets/refs/heads/main/deepseek_mermaid_20250821_1b2a2b.svg)
